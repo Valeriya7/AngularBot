@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "public", //"dist/miniappvaleriya/browser", 
     "ignore": [
       "firebase.json",
       "**/.*",
