@@ -1,24 +1,11 @@
 import { Routes } from '@angular/router';
+import { ShopComponent } from './pages/shop/shop.component';
+import { FeedbackComponent } from './pages/feedback/feedback.component';
+import { ProductComponent } from './pages/product/product.component';
 
 export const routes: Routes = [
-  {
-    path: '',
-    loadComponent: () => import('./pages/home/home.component').then(c => c.HomeComponent)
-  },
-  {
-    path: 'deferrable-views',
-    loadComponent: () => import('./pages/deferrable-views/deferrable-views.component').then(c => c.DeferrableViewsComponent),
-  },
-  {
-    path: 'ssg',
-    loadComponent: () => import('./pages/ssg/ssg.component').then(c => c.SsgComponent)
-  },
-  {
-    path: 'ssr',
-    loadComponent: () => import('./pages/ssr/ssr.component').then(c => c.SsrComponent)
-  },
-  {
-    path: '**',
-    loadComponent: () => import('./pages/not-found/not-found.component').then(c => c.NotFoundComponent)
-  }
+  { path: '', component: ShopComponent, pathMatch: 'full' },
+  { path: 'feedback', component: FeedbackComponent },
+  { path: 'product/:id', component: ProductComponent },
+  { path: '**', redirectTo: '' }
 ];

@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "firebase-app-hosting-angular": {
+    "telegram-bot-app": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,30 +13,21 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/firebase-app-hosting-angular",
+            "outputPath": "dist/telegram-bot-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": {
-              "routesFile": "routes.txt",
-              "discoverRoutes": false
-            },
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -70,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "firebase-app-hosting-angular:build:production"
+              "buildTarget": "telegram-bot-app:build:production"
             },
             "development": {
-              "buildTarget": "firebase-app-hosting-angular:build:development"
+              "buildTarget": "telegram-bot-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "firebase-app-hosting-angular:build"
+            "buildTarget": "telegram-bot-app:build"
           }
         },
         "test": {
@@ -92,13 +79,12 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -107,6 +93,6 @@
     }
   },
   "cli": {
-    "analytics": "d7b26870-e53f-45dd-b78c-e492cf656d0c"
+    "analytics": "3c9354b6-347f-457e-87c8-dac8e70ba47e"
   }
 }

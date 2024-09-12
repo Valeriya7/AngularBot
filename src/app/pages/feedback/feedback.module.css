@@ -1,4 +1,4 @@
-:host {
-  display: flex;
+.form {
+  height: 70vh;
   justify-content: center;
 }

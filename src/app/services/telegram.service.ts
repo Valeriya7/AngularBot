@@ -1,7 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Inject, Injectable } from '@angular/core';
 
-// интерфейс для функционала кнопок
 interface TgButton {
   show(): void;
   hide(): void;
@@ -13,12 +12,13 @@ interface TgButton {
 }
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class TelegramService {
   private window;
   tg;
-  constructor(@Inject(DOCUMENT) private _document) {
+
+  constructor(@Inject(DOCUMENT) private _document) { 
     this.window = this._document.defaultView;
     this.tg = this.window.Telegram.WebApp;
   }
@@ -39,4 +39,3 @@ export class TelegramService {
     this.tg.ready();
   }
 }
-

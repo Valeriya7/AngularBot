@@ -1,25 +1,16 @@
 {
   "hosting": {
-    "public": "public", //"dist/miniappvaleriya/browser", 
+    "public": "dist/telegram-bot-app/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
-  },
-  "database": {
-    "rules": "database.rules.json"
-  },
-  "emulators": {
-    "database": {
-      "port": 9000
-    },
-    "hosting": {
-      "port": 5000
-    },
-    "ui": {
-      "enabled": true
-    },
-    "singleProjectMode": true
   }
 }

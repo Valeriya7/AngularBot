@@ -1,31 +1,27 @@
-# Angular on Firebase App Hosting
+# TelegramBotApp
 
-This is an example [Angular](https://angular.dev/) project to demonstrate SSG,
-SSR, and deferrable views on [Firebase App Hosting](https://firebase.google.com/docs/app-hosting).
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
 
-## Getting Started
+## Development server
 
-Run the development server:
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-```bash
-npm run start
-```
+## Code scaffolding
 
-Open [http://localhost:4200](http://localhost:4200) with your browser to see the result.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Deploy to Firebase App Hosting
+## Build
 
-### 1. Get your project set up on GitHub
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-[Create a new GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
-and push the newly-initialized sample code to it:
+## Running unit tests
 
-<pre>
-git remote add origin https://github.com/<b>$YOUR_NEW_REPOSITORY</b>.git
-git branch -M main
-git push -u origin main
-</pre>
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-### 2. Set up Firebase App Hosting
+## Running end-to-end tests
 
-Continue to [Get started with Firebase App Hosting](https://firebase.google.com/docs/app-hosting/get-started#step-1:).
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

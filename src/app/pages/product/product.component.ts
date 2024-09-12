@@ -6,16 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-product',
   standalone: true,
-  template: `
-    <div class="centered">
-      <h2 class="mb">{{ product.title }}</h2>
-      <br />
-      <img [src]="product.image" [alt]="product.title" />
-      <p>{{ product.text }}</p>
-      <p>{{ product.time }}</p>
-      <a [href]="product.link" target="_blank">Посмотреть курс</a>
-    </div>
-  `,
+  templateUrl: './product.component.html',
 })
 export class ProductComponent implements OnInit, OnDestroy {
   product: IProduct;
@@ -24,11 +15,9 @@ export class ProductComponent implements OnInit, OnDestroy {
     private products: ProductsService,
     private telegram: TelegramService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
   ) {
-    // получаем динамический айди из адресной строки
     const id = this.route.snapshot.paramMap.get('id');
-    // получаем конкретный продукт из сервиса
     this.product = this.products.getById(id);
     this.goBack = this.goBack.bind(this);
   }
@@ -39,10 +28,8 @@ export class ProductComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.telegram.BackButton.show();
-    // добавляем функционал для перехода назад в телеграм
     this.telegram.BackButton.onClick(this.goBack);
   }
-
   ngOnDestroy(): void {
     this.telegram.BackButton.offClick(this.goBack);
   }
